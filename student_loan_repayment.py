@@ -5,6 +5,56 @@ import matplotlib.pyplot as plt
 st.title("💰 Student Loan Payoff Calculator")
 
 # ------------------------------
+# User Guide Section
+# ------------------------------
+with st.expander("📘 Student Loan Payoff User Guide"):
+    st.markdown(f"""
+    ## 📘 How to Use This App
+
+    ### 1️⃣ Step 1 – Understand Your Loan
+    - **Loan Amount:** `${0:,.2f}` (updates after you enter it below)
+    - **Interest Rate:** `{0:.2f}%` (updates after you enter it below)
+    - **Minimum Monthly Payment:** Auto-calculated for a 10-year plan
+    - **Extra Payment Example:** Enter any amount to see payoff speed-up
+
+    **Why this matters:** Knowing your exact loan balance, interest rate, and minimum payment is the foundation for building a smart payoff plan.
+
+    ---
+
+    ### 2️⃣ Step 2 – Choose a Payoff Strategy
+    #### **Option A – Minimum Payment**
+    - **Pros:** Frees up cash for other needs, lower immediate risk.
+    - **Cons:** Longest payoff time, highest total interest paid.
+
+    #### **Option B – Aggressive Payoff (+Extra Monthly Payment)**
+    - **Pros:** Shorter payoff period, less interest paid overall.
+    - **Cons:** Higher monthly commitment, less flexibility.
+
+    #### **Option C – Lump-Sum Payment**
+    - **Pros:** Instant reduction in balance, significant interest savings.
+    - **Cons:** Requires large upfront cash, risk if emergency arises.
+
+    ---
+
+    ### 3️⃣ Step 3 – Use the App's Features
+    1. **Loan Calculator Table** – Compare payoff timelines & interest savings.
+    2. **Balance Chart** – See how fast each strategy pays off your loan.
+    3. **Extra Payment Planner** – Test different amounts.
+
+    ---
+
+    ### 4️⃣ Step 4 – Pro Tips for Paying Off Faster
+    - Make biweekly payments instead of monthly (13 full payments per year).
+    - Apply tax refunds or bonuses directly to your loan.
+    - Refinance if you qualify for a lower rate (but check federal benefits first).
+    - Track progress visually to stay motivated.
+
+    ---
+
+    **💡 Financial Reminder:** Always keep an emergency fund before going too aggressive on loan payoff.
+    """)
+
+# ------------------------------
 # User Inputs
 # ------------------------------
 loan_amount = st.number_input("Loan Amount ($)", value=0.0, min_value=0.0, step=1000.0, format="%.2f")
